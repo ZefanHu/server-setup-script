@@ -18,6 +18,6 @@ vim-addons install youcompleteme
 sudo apt install -y htop tmux zsh
 
 # 安装 Oh My Zsh (可选)
-sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+# sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 
 echo "Server setup complete!"

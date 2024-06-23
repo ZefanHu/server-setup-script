@@ -1,1 +1,1 @@
-curl wget tree indent cbuild-essential vimplus htoptmux、zsh
+curl wget tree indent cbuild-essential vimplus htoptmux zsh

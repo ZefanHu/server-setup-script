@@ -15,7 +15,9 @@ sudo apt install -y vim-youcompleteme
 vim-addons install youcompleteme
 
 # 安装其他常用工具
-sudo apt install -y htop tmux zsh
+sudo apt install -y htop tmux 
+
+# sudo apt install -y zsh
 
 # 安装 Oh My Zsh (可选)
 # sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"

@@ -10,7 +10,7 @@
 
 - 更新系统
 - 安装常用工具（curl, wget, tree, indent, build-essential, vim, git, gdb）
-- 安装并配置 vimplus
+- 安装并配置 vimplus(完成之后, 会删除 YouCompleteMe 并重新安装, 避免一些奇怪的错误)
 - 优化 Bash 命令行提示符
 
 ## 使用方法

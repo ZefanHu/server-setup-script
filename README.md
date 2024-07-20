@@ -12,6 +12,7 @@
 - 安装常用工具（curl, wget, tree, indent, build-essential, vim, git, gdb）
 - 安装并配置 vimplus（完成之后, 会删除 YouCompleteMe 并重新安装, 避免一些奇怪的错误）
 - 优化 Bash 命令行提示符
+- 最后会让用户选择是否安装ylx2016 的 bbr脚本
 
 ## 使用方法
 

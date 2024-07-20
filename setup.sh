@@ -1,25 +1,31 @@
 #!/bin/bash
 
+# 设置非交互模式，避免弹窗
+export DEBIAN_FRONTEND=noninteractive
+
 # 更新系统
 sudo apt update && sudo apt upgrade -y
 
 # 安装常用工具
-sudo apt install -y curl wget tree indent build-essential vim git
+sudo apt install -y curl wget tree indent build-essential vim git gdb
 
 # 安装 vimplus
 git clone https://github.com/chxuan/vimplus.git ~/vimplus-master
 cd ~/vimplus-master
-./install.sh
+
+# 修改 install.sh 以自动选择 Python 3
+sed -i 's/read -p "Please choose python version (2/3): " python_version/python_version=3/' install.sh
+
+# 运行安装脚本，使用 yes 命令自动回答所有提示
+yes | ./install.sh
+
+# 删除 YouCompleteMe 并重新安装
 rm -rf ~/.vim/plugged/YouCompleteMe
 sudo apt install -y vim-youcompleteme
 vim-addons install youcompleteme
 
-# 安装其他常用工具
-sudo apt install -y htop tmux 
-
-# sudo apt install -y zsh
-
-# 安装 Oh My Zsh (可选)
-# sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+# 优化 bash 提示符
+echo 'export PS1='"'"'\[\e[36;48m\]\u\[\e[33;48m\]@\[\e[36;48m\]:\[\e[31;48m\]\W\[\e[00m\]\ '"'" >> ~/.bashrc
 
 echo "Server setup complete!"
+

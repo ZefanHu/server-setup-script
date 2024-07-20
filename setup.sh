@@ -29,3 +29,20 @@ echo 'export PS1='"'"'\[\e[36;48m\]\u\[\e[33;48m\]@\[\e[36;48m\]:\[\e[31;48m\]\W
 
 echo "Server setup complete!"
 
+# 询问是否安装并执行 tcp.sh
+read -p "Do you want to download and run tcp.sh for BBR acceleration? (y/n) " -n 1 -r
+echo    # 移动到新行
+if [[ $REPLY =~ ^[Yy]$ ]]
+then
+    # 下载 tcp.sh
+    wget -N --no-check-certificate "https://raw.githubusercontent.com/ylx2016/Linux-NetSpeed/master/tcp.sh"
+
+    # 给予执行权限
+    chmod +x tcp.sh
+
+    # 执行脚本
+    ./tcp.sh
+fi
+
+echo "All tasks completed!"
+

@@ -28,7 +28,7 @@ sudo apt install -y vim-youcompleteme
 vim-addons install youcompleteme
 
 # 优化 bash 提示符
-echo 'export PS1='"'"'\[\e[36;48m\]\u\[\e[33;48m\]@\[\e[36;48m\]:\[\e[31;48m\]\W\[\e[00m\]\ '"'" >> ~/.bashrc
+echo 'export PS1='"'"'\[\e[36;48m\]\u\[\e[33;48m\]@\[\e[36;48m\]:\[\e[31;48m\]\W\[\e[00m\]\$'"'" >> ~/.bashrc
 
 # 记录结束时间
 end_time=$(date +%s)

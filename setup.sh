@@ -1,5 +1,8 @@
 #!/bin/bash
 
+# 记录开始时间
+start_time=$(date +%s)
+
 # 设置非交互模式，避免弹窗
 export DEBIAN_FRONTEND=noninteractive
 
@@ -27,7 +30,19 @@ vim-addons install youcompleteme
 # 优化 bash 提示符
 echo 'export PS1='"'"'\[\e[36;48m\]\u\[\e[33;48m\]@\[\e[36;48m\]:\[\e[31;48m\]\W\[\e[00m\]\ '"'" >> ~/.bashrc
 
+# 记录结束时间
+end_time=$(date +%s)
+
+# 计算执行时间
+execution_time=$((end_time - start_time))
+
+# 转换秒数为更易读的格式
+hours=$((execution_time / 3600))
+minutes=$(( (execution_time % 3600) / 60 ))
+seconds=$((execution_time % 60))
+
 echo "Server setup complete!"
+echo "Total execution time: $hours hours, $minutes minutes, $seconds seconds"
 
 # 询问是否安装并执行 tcp.sh
 read -p "Do you want to download and run tcp.sh for BBR acceleration? (y/n) " -n 1 -r

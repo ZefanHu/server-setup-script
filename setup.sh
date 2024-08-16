@@ -10,7 +10,7 @@ export DEBIAN_FRONTEND=noninteractive
 sudo apt update && sudo apt upgrade -y
 
 # 安装常用工具
-sudo apt install -y curl wget tree indent build-essential vim git gdb
+sudo apt install -y curl wget tree indent net-tools build-essential vim git gdb
 
 # 安装 vimplus
 git clone https://github.com/chxuan/vimplus.git ~/vimplus-master
